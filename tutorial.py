@@ -11,14 +11,15 @@ def test_init():
 # TEST test_mutable_sequence()
 
 import collections
- 
- 
+
+
 def test_mutable_sequence():
     assert isinstance(dr.DictRegister(), collections.MutableSequence)
 
 ##########################################
 
 # TEST test_append_works()
+
 
 def test_append_works():
     d = dr.DictRegister()
@@ -47,6 +48,7 @@ def test_append_checks_if_mapping():
 
 # TEST test_init_with_list_of_dicts()
 
+
 def simple_dict():
     return {'a': 1, 'b': 2}
 
@@ -59,6 +61,7 @@ def test_init_with_list_of_dicts(simple_dict):
 ##########################################
 
 # TEST test_find_single_key()
+
 
 def test_find_single_key():
     d = dr.DictRegister([
@@ -87,6 +90,7 @@ def test_find_multiple_keys():
 
 # TEST test_find_single_key_value()
 
+
 def test_find_single_key_value():
     d = dr.DictRegister([
         {'a': 1, 'b': 2},
@@ -99,6 +103,7 @@ def test_find_single_key_value():
 ##########################################
 
 # TEST test_find_single_key_value_multiple_results()
+
 
 def test_find_single_key_value_multiple_results():
     d = dr.DictRegister([
@@ -116,6 +121,7 @@ def test_find_single_key_value_multiple_results():
 
 # TEST test_find_multiple_key_values()
 
+
 def test_find_multiple_key_values():
     d = dr.DictRegister([
         {'a': 1, 'b': 2, 'c': 4},
@@ -130,6 +136,7 @@ def test_find_multiple_key_values():
 ##########################################
 
 # TEST test_find_unnamed_and_named()
+
 
 def test_find_unnamed_and_named():
     d = dr.DictRegister([
@@ -146,6 +153,7 @@ def test_find_unnamed_and_named():
 
 # TEST test_find_explicit_equal()
 
+
 def test_find_explicit_equal():
     d = dr.DictRegister([
         {'a': 1, 'b': 2, 'c': 4},
@@ -160,6 +168,7 @@ def test_find_explicit_equal():
 ##########################################
 
 # TEST test_find_greater_than() [uncommented]
+
 
 def test_find_greater_than():
     d = dr.DictRegister([
@@ -180,6 +189,7 @@ def test_find_greater_than():
 
 # TEST test_add_keyword()
 
+
 def test_add_keyword():
     d = dr.DictRegister([{'x': 1, 'y': 2}, {'x': 3, 'y': 4}])
     d.kadd('z', 3)
@@ -192,6 +202,7 @@ def test_add_keyword():
 
 # TEST test_remove_keyword()
 
+
 def test_remove_keyword():
     d = dr.DictRegister([{'x': 1, 'y': 2}, {'x': 3, 'y': 4}])
     d.kremove('x')
@@ -202,6 +213,7 @@ def test_remove_keyword():
 ##########################################
 
 # TEST test_remove_not_present_keyword()
+
 
 def test_remove_not_present_keyword():
     d = dr.DictRegister([{'x': 1, 'y': 2, 'z': 8}, {'x': 3, 'y': 4}])
@@ -214,6 +226,7 @@ def test_remove_not_present_keyword():
 
 # TEST test_add_already_present_keyword()
 
+
 def test_add_already_present_keyword():
     d = dr.DictRegister([{'x': 1, 'y': 2}])
     d.kadd('x', 3)
@@ -224,6 +237,7 @@ def test_add_already_present_keyword():
 ##########################################
 
 # TEST test_remove_keyword_with_value()
+
 
 def test_remove_keyword_with_value():
     d = dr.DictRegister([{'x': 5, 'y': 2}, {'x': 3, 'y': 4}])
@@ -236,6 +250,7 @@ def test_remove_keyword_with_value():
 
 # TEST test_remove_keyword_value_from_multiple_values()
 
+
 def test_remove_keyword_value_from_multiple_values():
     d = dr.DictRegister([{'x': {5, 6}, 'y': 2}, {'x': 3, 'y': 4}])
     d.kremove('x', 5)
@@ -246,6 +261,7 @@ def test_remove_keyword_value_from_multiple_values():
 ##########################################
 
 # TEST test_remove_keyword_value_not_present_from_multiple_values()
+
 
 def test_remove_keyword_value_not_present_from_multiple_values():
     d = dr.DictRegister([{'x': {2, 6}, 'y': 2}, {'x': 3, 'y': 4}])
