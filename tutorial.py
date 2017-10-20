@@ -69,14 +69,6 @@ def test_find_single_key():
 
     assert d.find('a') == dr.DictRegister([{'a': 1, 'b': 2}, {'a': 5, 'c': 6}])
 
-
-# CODE test_find_single_key()
-
-    def find(self, key):
-        return self.__class__(
-            [d for d in self if key in d]
-        )
-
 ##########################################
 
 # TEST test_find_multiple_keys()
