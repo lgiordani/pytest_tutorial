@@ -18,7 +18,7 @@ def test_mutable_sequence():
 
 ##########################################
 
-# TEST test_append_works()
+# TEST test_append_works() [*]
 
 
 def test_append_works():
@@ -46,15 +46,11 @@ def test_append_checks_if_mapping():
 
 ##########################################
 
-# TEST test_init_with_list_of_dicts()
+# TEST test_init_with_list_of_dicts() [*]
 
 
-def simple_dict():
-    return {'a': 1, 'b': 2}
-
-
-def test_init_with_list_of_dicts(simple_dict):
-    d = dr.DictRegister([simple_dict])
+def test_init_with_list_of_dicts():
+    d = dr.DictRegister([{'a': 1, 'b': 2}])
 
     assert len(d) == 1
 
@@ -119,7 +115,7 @@ def test_find_single_key_value_multiple_results():
 
 ##########################################
 
-# TEST test_find_multiple_key_values()
+# TEST test_find_multiple_key_values() [*]
 
 
 def test_find_multiple_key_values():
